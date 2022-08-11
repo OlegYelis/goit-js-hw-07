@@ -30,10 +30,8 @@ galleryEl.addEventListener('click', evt => {
 
   instance.show();
 
-  const visible = basicLightbox.visible()
-
   document.addEventListener('keydown', evt => {
-    if (visible) {
+    if (basicLightbox.visible()) {
       if (evt.key === 'Escape') instance.close();
     }    
   })
