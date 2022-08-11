@@ -29,5 +29,13 @@ galleryEl.addEventListener('click', evt => {
 `);
 
   instance.show();
+
+  const visible = basicLightbox.visible()
+
+  document.addEventListener('keydown', evt => {
+    if (visible) {
+      if (evt.key === 'Escape') instance.close();
+    }    
+  })
 });
 
